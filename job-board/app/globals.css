@@ -1,0 +1,229 @@
+
+@import "tailwindcss";
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8fafc;
+  color: #172033;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* Page Layout */
+.homepage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+  background-color: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #172033;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* Centered Homepage Section */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: bold;
+  margin: 0 0 16px;
+}
+
+.hero-description {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0 0 40px;
+}
+
+/* Resume Section */
+.resume-upload {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.resume-upload h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.upload-description {
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+/* Upload Card */
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 260px;
+  padding: 35px 20px;
+  background-color: white;
+  border: 2px dashed #93c5fd;
+  border-radius: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.upload-box:hover {
+  border-color: #2563eb;
+}
+
+.upload-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.upload-box h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.upload-box > p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* Upload Button */
+.upload-button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.upload-button:hover {
+  background-color: #1d4ed8;
+}
+
+.upload-button:focus-visible,
+.nav-links a:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+/* File Selection Feedback */
+.upload-box .upload-success {
+  color: #15803d;
+  font-weight: 600;
+  margin: 16px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.upload-box .upload-error {
+  color: #dc2626;
+  font-weight: 600;
+  margin: 16px 0 0;
+}
+
+.privacy-note {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Mobile Layout */
+@media (max-width: 650px) {
+  .navbar {
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 45px 16px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .resume-upload h2 {
+    font-size: 22px;
+  }
+
+  .upload-box {
+    padding: 30px 15px;
+  }
+}
